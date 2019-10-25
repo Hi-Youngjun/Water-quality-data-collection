@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "628262895376",
+    "firebase_url": "https://waterqualiltydata.firebaseio.com",
+    "project_id": "waterqualiltydata",
+    "storage_bucket": "waterqualiltydata.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628262895376:android:e125d2bc6b9a547d",
+        "android_client_info": {
+          "package_name": "com.example.lgpc.waterqualiltydata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628262895376-7fetelgmscsdpkat4cc4g9rea3fiol6o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lgpc.waterqualiltydata",
+            "certificate_hash": "e53bf095e35a026df506a8283f0415f376b2cb06"
+          }
+        },
+        {
+          "client_id": "628262895376-fc541ai9i4k5nj08n4hk35cko7naqkjk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCiwe-ILp2xi_PeHgdmt_nBQZkDRAFMek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628262895376-fc541ai9i4k5nj08n4hk35cko7naqkjk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

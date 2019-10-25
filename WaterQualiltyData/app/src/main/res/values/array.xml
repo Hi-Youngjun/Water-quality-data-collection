@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayFlow">
+        <item>None</item>
+        <item>Very low</item>
+        <item>Low</item>
+        <item>Moderate</item>
+        <item>High</item>
+        <item>Very high</item>
+    </string-array>
+</resources>

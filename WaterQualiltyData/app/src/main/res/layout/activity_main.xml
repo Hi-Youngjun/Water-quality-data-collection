@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        tools:context=".MapsActivity" />
+    <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="@android:color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="8dp"/>
+
+
+        <TextView
+            android:id="@+id/textTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@id/textDate"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp"/>
+
+    </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Site Code"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/editSiteCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:focusableInTouchMode="true"
+        android:inputType="text"
+        android:maxLength="10"
+        android:cursorVisible="false"
+        android:nextFocusDown="@id/editDepth"
+        android:imeOptions="actionNext"
+
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Depth"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/editDepth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:maxLength="6"
+        android:hint="Between 0 and 50"
+        android:cursorVisible="false"
+        android:nextFocusDown="@id/editTemp"
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temp"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/editTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:maxLength="6"
+        android:hint="Between 0 and 50"
+        android:cursorVisible="false"
+        android:nextFocusDown="@id/editPh"
+        android:imeOptions="actionNext"
+        android:inputType="numberSigned"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pH"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/editPh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:maxLength="6"
+        android:hint="Between 0 and 14"
+        android:cursorVisible="false"
+        android:nextFocusDown="@id/editOrp"
+        android:imeOptions="actionNext"
+        android:inputType="numberSigned"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ORP"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/editOrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:maxLength="8"
+        android:hint="Between -1000 and 1000"
+        android:cursorVisible="false"
+        android:nextFocusDown="@id/editTurbidity"
+        android:imeOptions="actionNext"
+        android:inputType="numberSigned"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Turbidity"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/editTurbidity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:maxLength="8"
+        android:hint="Between 0 and 400"
+        android:cursorVisible="false"
+        android:nextFocusDown="@id/editConductivity"
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EC"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/editConductivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:maxLength="8"
+        android:hint="Between 0 and 400"
+        android:cursorVisible="false"
+        android:nextFocusDown="@id/editDo"
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DO(mg/L)"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/editDo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:maxLength="6"
+        android:hint="Between 0 and 15"
+        android:cursorVisible="false"
+        android:nextFocusDown="@id/editTds"
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TDS"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/editTds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:maxLength="6"
+        android:hint="Between 0 and 10"
+        android:cursorVisible="false"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flow"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerFlow"
+        android:entries="@array/arrayFlow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sample taken?"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbYes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Yes"/>
+
+        <RadioButton
+            android:id="@+id/rbNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="No"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comments"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/editComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:cursorVisible="false"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"/>
+
+    <Button
+        android:id="@+id/buttonPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Take Photo" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Save" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
