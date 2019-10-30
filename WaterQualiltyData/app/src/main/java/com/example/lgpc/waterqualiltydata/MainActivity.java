@@ -425,7 +425,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.buttonSave:
                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                     //Save the data in database
+                    Map<String, Object> updateData = new HashMap<>();
                     Map<String, Object> dataMap = new HashMap<>();
+
                     dataMap.put("A. Date", tvDate.getText().toString());
                     dataMap.put("B. Time", tvTime.getText().toString());
                     dataMap.put("C. Location",address.getAddressLine(0).toString());
@@ -442,7 +444,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     dataMap.put("N. Sample taken?",sSample);
                     dataMap.put("O. Comments", etComments.getText().toString());
 
-                    db.collection("Data")
+                    //realtime database
+                    updateData.put("Date"+tvDate.getText().toString(),dataMap);
+                    myRef.push().setValue(updateData);
+
+                    //Cloud firebase
+                    /*db.collection("Data")
                             .add(dataMap)
                             .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
@@ -455,7 +462,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 public void onFailure(@NonNull Exception e) {
                                     Log.w("TAG", "error adding document", e);
                                 }
-                            });
+                            });*/
                     //Reload the application
                     Intent intent = new Intent(MainActivity.this, MainActivity.class);
                     startActivity(intent);
